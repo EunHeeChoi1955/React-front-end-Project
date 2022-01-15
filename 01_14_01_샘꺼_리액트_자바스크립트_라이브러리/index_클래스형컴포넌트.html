@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리액트 시작하기</title>
+    <meta name="Publisher" content="MOONJONG">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- 리액트 오픈소스 -->
+    <script src="./js/lib/react.development.js"></script>
+    <script src="./js/lib/react-dom.development.js"></script>
+    <script src="./js/lib/babel.min.js"></script>
+
+</head>
+<body>
+
+
+    <div id="wrap"></div>
+
+    <script type="text/babel">
+
+        //클래스형 컴포넌트
+        // class 클래스이름 확장 리액트.컴포넌트 {
+        //     render(){
+        //         return(
+        //             <>
+        //                 탬플릿트내용 태그요소    
+        //             </>
+        //         )
+        //     }
+        // }
+
+        class HeaderComponent extends React.Component {
+            render(){
+                return(
+                    <>
+                        <header id='header' style={style1}>
+                            <h1 className='title' style={style2}>{this.props.title}</h1>
+                            <h2 style={style3}><span>프론트앤드</span> <span style={style4}>{this.props.name}님</span> <span>축하합니다.</span></h2>
+                        </header>
+                    </>
+                )
+            }
+        }
+
+
+
+        // 스크립트 스타일 객체
+        const style1 = {
+            padding:"100px 0",
+            textAlign:"center",
+            lineHeight: "250%"
+        }
+
+        const style2 = {
+            fontSize: "50px",
+            color:"#39c",
+            fontWeight: "600",
+            paddingBottom: "30px" 
+        }
+
+        const style3 = {
+            fontSize: "30px",
+            color:"#c99",
+            fontWeight: "500"
+        }
+
+        const style4 = {
+            fontSize: "50px",
+            color:"#99c",
+            fontWeight: "300"
+        }
+
+
+
+        //리액트-돔 랜더링
+        //속성(properties 프로퍼티스 프롭스 props)=필드=멤버변수 
+        ReactDOM.render(
+            <HeaderComponent name='문종' title='리액트(React) 프롭스 내려받기 헤더 컴포넌트 입니다.'></HeaderComponent>, //JSX
+            document.querySelector('#wrap')
+        );
+        
+    </script>   
+
+</body>
+</html>
