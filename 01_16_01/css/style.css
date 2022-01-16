@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* 한글인코딩 반드시 인용부호 큰따옴표 @charset 공백 "utf-8"쎼미콜론 반드시 표기; */
+
+/* 
+div p 디브이 밑에있는 모든 자손
+div>p 디브이 밑에있는 자식
+*/
+
+
+#wrap {width:1200px; height:700px; margin: 0 auto;}
+
+/* header */
+#wrap #header{width:1200px; height:100px; display: flex; }
+#wrap #header .left{width:180px; height:100px; margin: 0 auto;background-color:azure;}
+/* header right */
+#wrap #header .right{width:1020px; height:100px; margin: 0 auto;background-color:aquamarine;display: flex;}
+/* header nav */
+#wrap #header .right #nav{position: relative;width:700px;display:block;margin:auto 20px auto auto; }
+#wrap #header .right #nav>ul{width:auto;display: flex; }
+#wrap #header .right #nav>ul>li{ width:25%; background: #fff; }
+/* 인라인요소를 블록 요소로 바꿔서 사용 그러면 너비 높이를 지정가능하다. */
+#wrap #header .right #nav>ul>li>a{ display:block;font-size: 20px;text-align: center;line-height: 50px; height:50px; font-weight: 700;background: fff; color:#888;}
+#wrap #header .right #nav>ul>li>a:hover{ color:#fff;background: #222;}
+
+
+
+
+
+
+/* main */
+#wrap #main{width:1200px; height:500px; margin: 0 auto;background-color:aliceblue;}
+
+/* main section1 */
+#wrap #main #section1{width:1200px; height:300px; margin: 0 auto;background-color:bisque;}
+
+/* main section2 */
+#wrap #main #section2{width:1200px; height:200px; margin: 0 auto;background-color:azure;display: flex;}
+#wrap #main #section2 div{width:400px; height:200px;}
+#wrap #main #section2 div:nth-child(1){width:400px; height:200px;background-color:beige; }
+#wrap #main #section2 div:nth-child(2){width:400px; height:200px;background-color:aqua; }
+#wrap #main #section2 div:nth-child(3){width:400px; height:200px;background-color:blueviolet; }
+
+
+
+
+
+
+/* footer*/
+#wrap #footer{width:1200px; height:100px; margin: 0 auto;background-color:aquamarine;display: flex;}
+#wrap #footer .left{width:180px; height:100px; margin: 0 auto;background-color:blue;}
+/* footer right */
+#wrap #footer .right{width:1020px; height:100px; margin: 0 auto;background-color:cornflowerblue;}
+#wrap #footer .right .top{width:1020px; height:50px; margin: 0 auto;background-color:cadetblue;}
+#wrap #footer .right .bottom{width:1020px; height:50px; margin: 0 auto;background-color:darkcyan;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
