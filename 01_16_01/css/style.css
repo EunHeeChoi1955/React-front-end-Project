@@ -15,12 +15,21 @@ div>p 디브이 밑에있는 자식
 /* header right */
 #wrap #header .right{width:1020px; height:100px; margin: 0 auto;background-color:aquamarine;display: flex;}
 /* header nav */
-#wrap #header .right #nav{position: relative;width:700px;display:block;margin:auto 20px auto auto; }
+#wrap #header .right #nav{position: relative;width:700px;display:block;margin:25px 20px 25px auto; }
 #wrap #header .right #nav>ul{width:auto;display: flex; }
-#wrap #header .right #nav>ul>li{ width:25%; background: #fff; }
+#wrap #header .right #nav>ul>li{ width:25%; }
 /* 인라인요소를 블록 요소로 바꿔서 사용 그러면 너비 높이를 지정가능하다. */
-#wrap #header .right #nav>ul>li>a{ display:block;font-size: 20px;text-align: center;line-height: 50px; height:50px; font-weight: 700;background: fff; color:#888;}
+#wrap #header .right #nav>ul>li>a{ display:block;font-size: 20px;text-align: center;line-height: 50px; height:50px; font-weight: 700;background: #fff;  color:#888;}
 #wrap #header .right #nav>ul>li>a:hover{ color:#fff;background: #222;}
+/* submenu */
+#wrap #header .right #nav>ul>li>.sub {background-color: #fff; display: none; }
+#wrap #header .right #nav>ul>li>.sub>ul {padding: 0 0 20px 0;}
+#wrap #header .right #nav>ul>li>.sub>ul>li {width:100%;}
+#wrap #header .right #nav>ul>li>.sub>ul>li>a {display: block;height: 30px; line-height: 30px;text-align: center;background-color: #fff; }
+#wrap #header .right #nav>ul>li>.sub>ul>li>a:hover {background-color: #444; color: #fff;}
+
+/* 서브메뉴 마우스 이벤트:제이쿼리로 해야하는데 점검만 하기 */
+#wrap #header .right #nav>ul>li:hover >.sub { display: block; }
 
 
 
