@@ -1,0 +1,19 @@
+현재 웹페이지 직접 제작
+
+리액트 React
+리액트-돔 React-DOM
+바벨   Babel jsx Javascript XML
+
+<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+
+ES6
+필수 js
+
+
+create-react-app  cli
+
+script
+

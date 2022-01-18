@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리액트 시작하기</title>
+    <meta name="Publisher" content="MOONJONG">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- 리액트 오픈소스 -->
+    <script src="./js/lib/react.development.js"></script>
+    <script src="./js/lib/react-dom.development.js"></script>
+    <script src="./js/lib/babel.min.js"></script>
+
+</head>
+<body>
+
+   
+    <!-- 루트(Root) -->
+    <div id="app"></div>
+
+    <script type="text/babel">
+
+        // 1. 돔 컨테이너 박스
+        // 2. 리액트-돔과 돔 컨테이너와 연결
+        // 3. 리액트 컴포넌트(JSX) 생성(class react)하고 리액트-돔과 연결
+
+        class SectionComponent extends React.Component {
+
+            //프롭스(프로퍼티이스 Properties) = props 속성 = 필드 item attribute(어트리뷰트) attr
+            // 컴포넌트 밖에 설정할 때는
+            // 컴포넌트이름.기본속성객체생성 = {} 
+            // this.props.title1 프롭스 객체 속성 표현형식
+            
+            // 컴포넌트 내부에 랜더함수 위에 설정
+            // 반드시 static 키워드를 표기(선언)하고 defaultPops 
+            static defaultProps = {
+                title1: '한국의 맛있는 음식 소개',
+                title2: '전통적인 한국의 된장과 고추장',
+                title3: '우리들이 좋아하는 음식',
+                food1: '된장국',
+                food2: '청국장',
+                food3: '우렁국',
+                food4: '시레기국',
+                food5: '순대국'
+            }
+
+            render(){
+                //순수한 자바스크립트 코딩
+                console.log( this.props );
+                //구조 분할 할당 === 비구조화 할당
+                const obj = {
+                    학번:"1001",
+                    이름:"이순신",
+                    거주지:"서울시 강남"
+                }
+                console.log('객체.속성 ', obj.학번,  obj.이름,  obj.거주지 );
+
+                const {학번, 이름, 거주지} = obj;
+                console.log('속성에 할당 ', 학번,  이름,  거주지 );
+
+                //배열 병합 merge
+                const arr = ['피자', '파스타', '랍스타', '탕수율', '팔보채'];                
+                const arr2 = ['떡볶이', '오징어튀김','김밥'];
+                const arrMerge = [] = [...arr, ...arr2]; //배열 병합
+
+                //... 전개연산자
+                console.log(  [...arrMerge] );
+                console.log('배열 arrMerge ',  arrMerge );
+
+                const obj2 = {
+                    국어:99,
+                    영어:100,
+                    수학:98
+                }
+
+                // 객체병합
+                const obj3 = {} = {...obj, ...obj2};
+                console.log('obj3 : ',  {...obj3} );
+
+                //프롭스 구조 분할 할당(비구화 할당)
+                const {title1,title2,title3,food1,food2,food3,food4,food5} = this.props;
+                const {t1,t2,t3} = style.title;
+                const {f1,f2,f3,f4,f5} = style.food;
+
+                return(
+                   <>
+                        <div className='title'>
+                            <h1 style={t1}>{title1}</h1>
+                            <h2 style={t2}>{title2}</h2>    
+                        </div>
+                        <div className='content'>
+                            <h3 style={t3}>{title3}</h3>
+                            <ul>
+                                <li style={f1}>{food1}</li>
+                                <li style={f2}>{food2}</li>
+                                <li style={f3}>{food3}</li>
+                                <li style={f4}>{food4}</li>
+                                <li style={f5}>{food5}</li>
+                            </ul>
+                        </div>
+                    </>
+               )
+            }
+        }
+
+            //프롭스(프로퍼티이스 Properties) = props 속성 = 필드 item attribute(어트리뷰트) attr
+            // 컴포넌트 밖에 설정할 때는
+            // 컴포넌트이름.기본속성객체생성 = {} 
+            // this.props.title1 프롭스 객체 속성 표현형식
+            
+            // 컴포넌트 내부에 랜더함수 위에 설정
+            // 반드시 static 키워드를 표기(선언)하고 defaultPops 
+            // SectionComponent.defaultProps = {
+            //     title1: '한국의 맛있는 음식 소개',
+            //     title2: '전통적인 한국의 된장과 고추장',
+            //     title3: '우리들이 좋아하는 음식',
+            //     food1: '된장국',
+            //     food2: '청국장',
+            //     food3: '우렁국',
+            //     food4: '시레기국',
+            //     food5: '순대국'
+            // }
+
+        // 스타일 설정
+        const style = {
+            title: {
+                t1: {
+                    fontSize: '50px',
+                    color: '#000',
+                    fontWeight: '600',
+                    textAlign: 'center'
+                },
+                t2: {
+                    fontSize: '35px',
+                    color: '#38b',
+                    fontWeight: '500',
+                    textAlign: 'center'
+
+                },
+                t3: {
+                    fontSize: '25px',
+                    color: '#b83',
+                    fontWeight: '400',
+                    textAlign: 'center'                    
+                }  
+            },
+            food: {
+                f1:{fontSize: '17px',color: '#c55'},
+                f2:{fontSize: '17px',color: '#5c5'},
+                f3:{fontSize: '17px',color: '#55c'},
+                f4:{fontSize: '17px',color: '#c5c'},
+                f5:{fontSize: '17px',color: '#5c5'}
+            }
+        }        
+
+
+        
+
+        ReactDOM.render(
+            <SectionComponent></SectionComponent>,  //JSX
+            document.querySelector('#app')
+        );
+
+        
+    </script>
+
+
+</body>
+</html>
