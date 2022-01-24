@@ -1,0 +1,12 @@
+@charset "UTF-8";
+@import url('./fonts.css');
+@import url('./reset.css');
+
+#app {width:1000px;margin:0 auto;}
+#app .title {padding:50px 0 0 0;}
+#app .title h1 {padding:50px 0 20px 0;}
+
+#app .content {padding:50px 0 20px 0;}
+#app .content h3 {padding:0 0 20px 0;}
+#app .content ul {line-height:200%;text-align:center;}
+
