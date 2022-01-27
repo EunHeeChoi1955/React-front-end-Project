@@ -1,0 +1,37 @@
+@charset "UTF-8";
+@import url('./fonts.css');
+@import url('./reset.css');
+
+#app {width:100%;}
+#app #noticeBoard {width:100%;padding:10px 0;}
+#app #noticeBoard .container {width:100%;max-width:1100px;margin:0 auto;}
+#app #noticeBoard .container .title {padding:70px 0;}
+#app #noticeBoard .container .title h1 {font-size:50px;text-align:center;color:#000;}
+
+#app #noticeBoard .container .content {width:100%;}
+#app #noticeBoard .container .content #notice-form {width:100%;}
+#app #noticeBoard .container .content #notice-form .container {width:100%;}
+#app #noticeBoard .container .content #notice-form .container form {width:100%;}
+#app #noticeBoard .container .content #notice-form .container form ul {width:100%;}
+#app #noticeBoard .container .content #notice-form .container form ul li {border-bottom:1px solid #ddd;margin:10px 0;}
+#app #noticeBoard .container .content #notice-form .container form ul li input {width:100%;padding:0 15px;height:50px;border:1px solid #777;font-size:16px;}
+#app #noticeBoard .container .content #notice-form .container form ul li input::placeholder {color:#aaa;}
+#app #noticeBoard .container .content #notice-form .container form ul li textarea {width:100%;padding:10px 15px;height:200px;border:1px solid #777;resize:none;font-size:16px;}
+#app #noticeBoard .container .content #notice-form .container form ul li textarea::placeholder {color:#aaa;}
+
+#app #noticeBoard .container .content #notice-form .container form div {width:100%;padding:50px 0;}
+#app #noticeBoard .container .content #notice-form .container form div button {width:100%;height:60px;background:#222;color:#fff;}
+
+
+/* 출력 */
+#app #noticeBoard .container .content #notice-form .container .notice-list {width:100%;}
+#app #noticeBoard .container .content #notice-form .container .notice-list table {width:100%;border-collapse:collapse;}
+#app #noticeBoard .container .content #notice-form .container .notice-list table th {height:60px;height:50px;border-top:1px solid #222;height:50px;border-bottom:1px solid #222;}
+#app #noticeBoard .container .content #notice-form .container .notice-list table td {height:50px;border-bottom:1px solid #ddd;}
+
+#app #noticeBoard .container .content #notice-form .container .notice-list table td:nth-child(1) {width:100px;text-align: center;}
+#app #noticeBoard .container .content #notice-form .container .notice-list table td:nth-child(2) {width:800px;text-align: left;}
+#app #noticeBoard .container .content #notice-form .container .notice-list table td:nth-child(3) {width:200px;text-align: center;}
+
+#app #noticeBoard .container .content #notice-form .container .notice-list table td a {display:block;line-height:50px;width:70%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+#app #noticeBoard .container .content #notice-form .container .notice-list table td a:hover {text-decoration:underline;color:#000;}

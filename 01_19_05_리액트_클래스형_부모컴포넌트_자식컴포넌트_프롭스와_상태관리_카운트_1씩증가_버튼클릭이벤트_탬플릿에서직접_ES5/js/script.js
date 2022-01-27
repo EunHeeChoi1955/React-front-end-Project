@@ -21,7 +21,7 @@ class MainComponent extends React.Component {
                         <h1 style={{fontSize:'30px', color:'#c77', textAlign:'center'}}>{title}</h1>
                         
                         <button onClick={function(){this.setState({cnt: cnt+1})}.bind(this)} style={{cursor:'pointer',fontSize:'20px',backgroundColor:'#222',color:'#fff',padding:'10px 30px'}}>1씩증가</button>&nbsp;
-                        <button onClick={function(){this.setState({cnt: cnt+1})}.bind(this)} style={{cursor:'pointer',fontSize:'20px',backgroundColor:'#222',color:'#fff',padding:'10px 30px'}}>1씩감소</button>
+                        <button onClick={function(){this.setState({cnt: cnt-1})}.bind(this)} style={{cursor:'pointer',fontSize:'20px',backgroundColor:'#222',color:'#fff',padding:'10px 30px'}}>1씩감소</button>
                     </div>  
                     <div className="content">
                         <FoodListComponent cnt={cnt}></FoodListComponent>

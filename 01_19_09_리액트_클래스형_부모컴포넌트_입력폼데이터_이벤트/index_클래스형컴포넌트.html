@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>리액트 시작하기</title>
-    <meta name="Publisher" content="MOONJONG">
+    <meta name="Publisher" content="EunHee">
     <link rel="stylesheet" href="./css/style.css">
     <!-- 리액트 오픈소스 -->
     <script src="./js/lib/react.development.js"></script>
@@ -17,7 +17,48 @@
 
     <div id="app"></div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {    
+function progress(timeleft, timetotal, $element) {
+	var progressBarWidth = (timeleft / timetotal) * $element.width();
+    $element.find('div').animate({ width: progressBarWidth }, timeleft == timetotal ? 0 : 20000, 'linear').html(timeleft + " 일 남음");
+    if(timeleft > 0) {
+        setTimeout(function() {
+            progress(timeleft - 1, timetotal, $element);
+        }, 20000);
+    }
+};
+progress(20, 20, $('#progressBar'));
+});
+</script>
+
+<style>
+#progressBar {
+    width: 90%;
+    margin: 10px auto;
+    height: 50px;
+    background-color: #f5f5f5;
+    color: #fff;
+}
+
+#progressBar div {
+    height: 100%;
+    text-align: right;
+    padding: 0;
+    line-height: 50px; /* same as #progressBar height if we want text middle aligned */
+    width: 0;
+    background-color: #c00;
+    box-sizing: border-box;
+}
+</style>
+
+<div id="progressBar">
+    <div></div>
+</div>
+
     <script type="text/babel" src='./js/script.js'></script>
+
 
 </body>
 </html>

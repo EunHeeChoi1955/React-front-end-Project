@@ -49,7 +49,7 @@ class FoodListComponent extends React.Component {
         return(
             <>
                 <ul className='food-list' style={{fontSize:'50px',color:'#000'}}>
-                    {txt}
+                     {txt}
                 </ul>  
             </>
         )

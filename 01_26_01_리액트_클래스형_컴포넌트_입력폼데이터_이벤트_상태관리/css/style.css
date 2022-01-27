@@ -1,0 +1,24 @@
+@charset "UTF-8";
+@import url('./fonts.css');
+@import url('./reset.css');
+
+#app {width:1000px;margin:0 auto;}
+#app #main {}
+#app #main .title {}
+#app #main .title h1 {}
+#app #main .content {}
+#app #main .content #notice {}
+#app #main .content #notice {}
+#app #main .content #notice form {}
+#app #main .content #notice form div  {margin:10px 0;}
+#app #main .content #notice form div input {border:1px solid #ccc;width:100%;height:50px;background:#f9f9f9;font-size:16px;color:#333;padding:0 15px;}
+#app #main .content #notice form div input::placeholder {color:#ccc;}
+#app #main .content #notice form div button {border:0;width:100%;height:50px;background:#000;color:#fff;font-size:17px;}
+
+#app #main .content #notice .content {}
+#app #main .content #notice .content h2 {}
+
+#app #main .content #notice .content #list {}
+#app #main .content #notice .content #list .content {}
+#app #main .content #notice .content #list .content ul {}
+#app #main .content #notice .content #list .content ul li {}
